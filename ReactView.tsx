@@ -19,7 +19,11 @@ export const ReactView: React.FC<ReactViewProps> = ({ content }) => {
 		return (
 			<Grid container>
 				{Array.from({ length: grids.length }).map((_, i) => (
-					<Grid size={grids[i]} key={i}>
+					<Grid
+						size={grids[i]}
+						key={i}
+						sx={{ border: "1px solid black" }}
+					>
 						<ReactMarkdown>{boxes[i]}</ReactMarkdown>
 					</Grid>
 				))}
